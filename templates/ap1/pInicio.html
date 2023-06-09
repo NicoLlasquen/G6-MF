@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %} {% block content %}
+<div class="container">
+  <h1>Propósito</h1>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
+    blanditiis repudiandae deleniti perspiciatis fugit neque, aperiam harum
+    numquam molestiae impedit beatae magnam iste nam sequi facilis odit
+    exercitationem! Doloribus, quia!
+  </p>
+
+  <div class="container-fluid text-center my-5">
+    <button type="submit" class="btn btn-outline-info btn-lg p-4 ms-4">
+      <a href="{% url 'unidades' %}">Estudiante (acceso publico)</a>
+    </button>
+    <button type="submit" class="btn btn-outline-info btn- lg p-4 ms-4">
+      Estudiante registrado
+    </button>
+  </div>
+</div>
+{% endblock content %}

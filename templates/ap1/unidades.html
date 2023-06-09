@@ -1,0 +1,25 @@
+{% extends 'layout/base.html' %}{% block content %}
+<h1>Unidades</h1>
+<div>
+  <div>
+    <button class="btn btn-outline-primary">
+      <a href="{% url 'numeros' %}">Números</a>
+    </button>
+  </div>
+  <div>
+    <button class="btn btn-outline-primary">
+      <a href="{% url 'algebra' %}">Algebra y Funciones</a>
+    </button>
+  </div>
+  <div>
+    <button class="btn btn-outline-primary">
+      <a href="{% url 'geometria' %}">Geometría</a>
+    </button>
+  </div>
+  <div>
+    <button class="btn btn-outline-primary">
+      <a href="{% url 'probabilidad' %}">Probabilidad y Estadística</a>
+    </button>
+  </div>
+</div>
+{% endblock content %}

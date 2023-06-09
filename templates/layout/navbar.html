@@ -1,0 +1,51 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <img src="{% static 'imagenes\layout\Icono.png' %}" width="50px" />
+    <a class="navbar-brand" href="/">Matefilia</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Unidades
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="{% url 'numeros' %}">Números</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{% url 'algebra' %}"
+                >Álgebra y Funciones</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="{% url 'geometria' %}"
+                >Geometría</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="{% url 'probabilidad' %}"
+                >Probabilidad y Estadística</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Foro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'creditos' %}">Creditos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
