@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .models import Usuario
 
 
-def usuario(request):
-    return render(request, 'ap3/usuario.html')
+def usuarios(request):
+
+    todoUsuarios = Usuario.objects.all()
+
+    return render(request, 'ap3/usuarios.html', {'usuarios': todoUsuarios})
