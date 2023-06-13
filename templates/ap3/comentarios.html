@@ -1,6 +1,15 @@
 {% extends 'layout/base.html' %}{% block content %}
 <div>
-  <div><h1>Comentarios</h1></div>
+  <div class="container text-center my-4"><h1>Comentarios</h1></div>
+  <div class="container text-center my-4">
+    <button class="btn btn-primary bg-dark">
+      <h3>
+        <a class="text-light" href="{% url 'crearComentario' %}"
+          >Crear Comentario</a
+        >
+      </h3>
+    </button>
+  </div>
   <div>
     {% for coment in coment %}
     <div><h3>{{ coment.texto }}</h3></div>

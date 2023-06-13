@@ -1,5 +1,10 @@
 {% extends 'layout/base.html' %}{% block content %}
 <div class="container text-center my-4"><h1>Foro</h1></div>
+<div class="container text-center my-4">
+  <button class="btn btn-primary bg-dark">
+    <a class="text-light" href="{% url 'crearForo' %}">Crear Publicación</a>
+  </button>
+</div>
 <div>
   <div class="col-md-4 offset-md-4">
     {% for foro in foro %}
