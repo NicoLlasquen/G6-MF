@@ -17,3 +17,8 @@ class Foro(models.Model):
 
     def __str__(self):
         return self.titulo + "-" + self.usuarioForo.nombre
+
+
+class Comentarios(models.Model):
+    texto = models.TextField()
+    usuarioComent = models.ForeignKey(Usuario, on_delete=models.CASCADE)
