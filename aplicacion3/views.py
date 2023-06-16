@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Usuario, Foro, Comentarios
-from .formularios import Crear_publicacion, Crear_comentario
+from .formularios import Crear_publicacion, Crear_comentario, Crear_usuario
 
 
 def usuarios(request):
@@ -30,7 +30,7 @@ def crearForo(request):
         return render(request, 'ap3/crearForo.html', {'form': Crear_publicacion})
     else:
         Foro.objects.create(
-            titulo=request.POST['titulo'], imagen=request.POST['imagen'], texto=request.POST['texto'])
+            titulo=request.POST['titulo'], texto=request.POST['texto'])
         return redirect('foro')
 
 
@@ -41,3 +41,12 @@ def crearComentario(request):
     else:
         Comentarios.objects.create(texto=request.POST['texto'])
         return redirect('comentario')
+
+
+def crearUsuario(request):
+
+    if request.method == 'GET':
+        return render(request, 'ap3/crearUsuario.html', {'form': Crear_usuario})
+    else:
+        Comentarios.objects.create(nombre=request.POST['nombre'], rut=request.POST['rut'], año=request.POST['año'])
+        return redirect('usuarios')

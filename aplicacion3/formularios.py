@@ -17,5 +17,5 @@ class Crear_comentario(forms.Form):
 
 class Crear_usuario(forms.Form):
     nombre = forms.CharField(label="Nombre", max_length=100)
-    rut = forms.IntegerField(label="Rut", max_value=8, min_value=8)
+    rut = forms.IntegerField(label="Rut")
     año = forms.CharField(label="Año académico", max_length=50)

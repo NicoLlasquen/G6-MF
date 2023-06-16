@@ -8,4 +8,5 @@ urlpatterns = [
     path('Comentarios/', views.comentarios, name='comentario'),
     path('CrearForo/', views.crearForo, name='crearForo'),
     path('CrearComentario/', views.crearComentario, name='crearComentario'),
+    path('crearUsuario/', views.crearUsuario, name='crearUsuario')
 ]
