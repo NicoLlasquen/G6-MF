@@ -13,12 +13,22 @@ class Usuario(models.Model):
 class Foro(models.Model):
     titulo = models.CharField(max_length=100)
     texto = models.TextField()
-    usuarioForo = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.titulo + "-" + self.usuarioForo.nombre
+        return self.titulo
+
+
+class Tematica(models.Model):
+    nombre = models.CharField(max_length=100)
+    imagen = models.ImageField(upload_to="static/imagenes/foro", blank=None)
+
+    def __str__(self):
+        return self.nombre
 
 
 class Comentarios(models.Model):
     texto = models.TextField()
     usuarioComent = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.usuarioComent.nombre

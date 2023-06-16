@@ -1,7 +1,7 @@
 body {
-    background-color: lightslategray;
+    background-color: rgb(34, 153, 62);
 }
 
-.botones {
-    text-emphasis-color: black;
+h1 {
+    color: rgb(222, 206, 32);
 }

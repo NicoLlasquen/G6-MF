@@ -30,7 +30,7 @@ def crearForo(request):
         return render(request, 'ap3/crearForo.html', {'form': Crear_publicacion})
     else:
         Foro.objects.create(
-            titulo=request.POST['titulo'], texto=request.POST['texto'], usuario=request.POST['usuario'])
+            titulo=request.POST['titulo'], imagen=request.POST['imagen'], texto=request.POST['texto'])
         return redirect('foro')
 
 
