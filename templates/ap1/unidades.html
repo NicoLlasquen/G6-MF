@@ -1,25 +1,49 @@
-{% extends 'layout/base.html' %}{% block content %}
+{% extends 'layout/base.html' %}{% block content %}{% load static %}
 <h1>Unidades</h1>
 <div>
   <div>
     <button class="btn btn-outline-primary">
       <a href="{% url 'numeros' %}">Números</a>
     </button>
+    <img
+      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+      alt="foto"
+      width="60px"
+      height="100px"
+    />
   </div>
   <div>
     <button class="btn btn-outline-primary">
       <a href="{% url 'algebra' %}">Algebra y Funciones</a>
     </button>
+    <img
+      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+      alt="foto"
+      width="60px"
+      height="100px"
+    />
   </div>
   <div>
     <button class="btn btn-outline-primary">
       <a href="{% url 'geometria' %}">Geometría</a>
     </button>
+    <img
+      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+      alt="foto"
+      width="60px"
+      height="100px"
+    />
   </div>
   <div>
     <button class="btn btn-outline-primary">
       <a href="{% url 'probabilidad' %}">Probabilidad y Estadística</a>
     </button>
+    <img
+      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+      alt="foto"
+      width="60px"
+      height="100px"
+    />
   </div>
 </div>
 {% endblock content %}

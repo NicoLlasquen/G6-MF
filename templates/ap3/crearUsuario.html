@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}{% block content %}
-<div><h1>Crear Usuario</h1></div>
-<div>
+<div><h1 class="text-center">Crear Usuario</h1></div>
+<div class="contenedor-formulario-usuario">
   <form method="POST">
     {% csrf_token %} {{form.as_p}}
     <button class="btn btn-primary bg-dark">Guardar</button>

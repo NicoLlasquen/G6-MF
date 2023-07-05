@@ -17,10 +17,9 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
   <body>
     {% include 'layout/navbar.html' %}
-    <main>{% block content %}{% endblock content %}</main>
+    <main>{% block content %}{% load static %}{% endblock content %}</main>
   </body>
 </html>

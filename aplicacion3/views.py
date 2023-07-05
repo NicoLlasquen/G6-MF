@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Usuario, Foro, Comentarios
-from .formularios import Crear_publicacion, Crear_comentario, Crear_usuario
+from .form import Crear_comentario, Crear_usuario
 
 
 def usuarios(request):
@@ -24,22 +24,13 @@ def comentarios(request):
     return render(request, 'ap3/comentarios.html', {'coment': todoComentarios})
 
 
-def crearForo(request):
-
-    if request.method == 'GET':
-        return render(request, 'ap3/crearForo.html', {'form': Crear_publicacion})
-    else:
-        Foro.objects.create(
-            titulo=request.POST['titulo'], texto=request.POST['texto'])
-        return redirect('foro')
-
-
 def crearComentario(request):
 
     if request.method == 'GET':
         return render(request, 'ap3/crearComentario.html', {'form': Crear_comentario})
     else:
-        Comentarios.objects.create(texto=request.POST['texto'])
+        Comentarios.objects.create(
+            texto=request.POST['texto'], usuarioComent=request.POST['usuario'])
         return redirect('comentario')
 
 
@@ -48,5 +39,5 @@ def crearUsuario(request):
     if request.method == 'GET':
         return render(request, 'ap3/crearUsuario.html', {'form': Crear_usuario})
     else:
-        Comentarios.objects.create(nombre=request.POST['nombre'], rut=request.POST['rut'], año=request.POST['año'])
+        Usuario.objects.create(nombre=request.POST['nombre'], rut=request.POST['rut'], añoAcad=request.POST['añoAcad'])
         return redirect('usuarios')
