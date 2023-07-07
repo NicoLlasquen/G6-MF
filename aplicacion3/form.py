@@ -2,8 +2,8 @@ from django import forms
 from .models import Usuario
 
 
-class Crear_comentario(forms.Form):
-    texto = forms.CharField(label="Comentario", widget=forms.Textarea)
+class Crear_sugerencia(forms.Form):
+    texto = forms.CharField(label="Sugerencia", widget=forms.Textarea)
     # usuarioComent = Usuario.objects.filter(rut__in=nombre)
 
 

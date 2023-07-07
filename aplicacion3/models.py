@@ -10,14 +10,6 @@ class Usuario(models.Model):
         return self.nombre
 
 
-class Foro(models.Model):
-    titulo = models.CharField(max_length=100)
-    texto = models.TextField()
-
-    def __str__(self):
-        return self.titulo
-
-
 class Tematica(models.Model):
     nombre = models.CharField(max_length=100)
     imagen = models.ImageField(upload_to="static/imagenes/foro")
@@ -42,9 +34,17 @@ class Probabilidad(Tematica):
     documentos = models.FileField(storage="static/documentos/probabilidad")
 
 
-class Comentarios(models.Model):
+class Sugerencias(models.Model):
     texto = models.TextField()
-    usuarioComent = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    usuarioSugerencia = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.usuarioComent.nombre
+        return self.usuarioSugerencia.nombre
+
+
+class Comentarios(models.Model):
+    texto = models.TextField(max_length=300)
+    usuarioComentario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.usuarioComentario.nombre

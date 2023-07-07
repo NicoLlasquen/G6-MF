@@ -1,3 +1,116 @@
-{% extends 'layout/base.html' %}{% block content %}
-<div>hola geometría</div>
+{% extends 'layout/base.html' %}{% block content %}{% load static %}
+<div><h1>Eje de Geometria</h1></div>
+<div>
+  <h2>Descripción</h2>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta inventore
+    omnis voluptatum quia mollitia quisquam minima eligendi debitis architecto
+    sed, maxime dicta alias ullam deleniti dolorem. Magni ex quaerat sequi
+    accusamus, quae aspernatur dolore magnam corporis. Tempore laboriosam illo
+    aliquid corrupti, laudantium voluptatem sed voluptatum dignissimos cum saepe
+    laborum beatae cumque! Error, vel! Alias doloribus ab quae ipsam blanditiis,
+    dolorem placeat commodi fugiat quia necessitatibus nostrum ratione eius
+    perspiciatis magni? Unde magni totam nesciunt facilis eum ut labore ducimus
+    facere sequi soluta, voluptatem voluptatibus, odio explicabo, optio quam
+    debitis? Quasi voluptatibus incidunt recusandae, veritatis adipisci maxime
+    dolore illo vel natus.
+  </p>
+</div>
+<div>
+  <h2>Contenidos</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, dolorum.
+    Temporibus mollitia quibusdam quidem facere, ad dolore ullam dignissimos
+    laudantium explicabo, eligendi obcaecati ipsum aperiam sunt voluptatum? Sint
+    optio, tempore corrupti laboriosam doloribus earum? Natus impedit
+    accusantium nemo culpa necessitatibus voluptatum dolorum adipisci, nihil
+    earum alias praesentium quae, maiores aspernatur placeat laborum consectetur
+    ratione quam harum velit eos ex. Consectetur quibusdam aut quasi dolorem
+    praesentium ratione qui, eveniet commodi! Minus temporibus ullam vero
+    excepturi? Accusamus ullam, maiores quod sunt rerum eveniet, aliquam atque
+    veniam quos corporis cupiditate minus cum quisquam voluptate magnam illo
+    quas ipsum! Ullam officia doloremque labore maiores.
+  </p>
+</div>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="false"
+        aria-controls="collapseOne"
+      >
+        <strong>Ejemplo 1: 1+1=</strong>
+      </button>
+    </h2>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>La respuesta de este ejemplo es 2</strong>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordionExample2">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseDos"
+        aria-expanded="false"
+        aria-controls="collapseDos"
+      >
+        <strong>Ejemplo 1: 1+1=</strong>
+      </button>
+    </h2>
+    <div
+      id="collapseDos"
+      class="accordion-collapse collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>La respuesta de este ejemplo es 2</strong>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordionExample3">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTres"
+        aria-expanded="false"
+        aria-controls="collapseTres"
+      >
+        <strong>Ejemplo 1: 1+1=</strong>
+      </button>
+    </h2>
+    <div
+      id="collapseTres"
+      class="accordion-collapse collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>La respuesta de este ejemplo es 2</strong>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <h2>Ejercicios Propuestos</h2>
+  <div>
+    <a href="{% static 'documentos/numeros/ejerciciosPDF.pdf' %}">ejercicios</a>
+  </div>
+</div>
 {% endblock content %}

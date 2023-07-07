@@ -1,49 +1,61 @@
 {% extends 'layout/base.html' %}{% block content %}{% load static %}
-<h1>Unidades</h1>
-<div>
-  <div>
-    <button class="btn btn-outline-primary">
-      <a href="{% url 'numeros' %}">Números</a>
-    </button>
-    <img
-      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
-      alt="foto"
-      width="60px"
-      height="100px"
-    />
+<h1 class="text-center my-5">Unidades</h1>
+<div class="row">
+  <div class="col-sm-2 mx-5 my-5">
+    <div class="card" style="width: 18rem">
+      <img
+        src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+        class="card-img-top"
+        alt="Numeros"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Números</h5>
+        <p class="card-text">Material y ejercicios sobre el eje temático</p>
+        <a href="{% url 'numeros' %}" class="btn btn-primary">Entrar</a>
+      </div>
+    </div>
   </div>
-  <div>
-    <button class="btn btn-outline-primary">
-      <a href="{% url 'algebra' %}">Algebra y Funciones</a>
-    </button>
-    <img
-      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
-      alt="foto"
-      width="60px"
-      height="100px"
-    />
+  <div class="col-sm-2 mx-5 my-5">
+    <div class="card" style="width: 18rem">
+      <img
+        src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+        class="card-img-top"
+        alt="Algebra"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Álgebra y Funciones</h5>
+        <p class="card-text">Material y ejercicios sobre el eje temático</p>
+        <a href="{% url 'algebra' %}" class="btn btn-primary">Entrar</a>
+      </div>
+    </div>
   </div>
-  <div>
-    <button class="btn btn-outline-primary">
-      <a href="{% url 'geometria' %}">Geometría</a>
-    </button>
-    <img
-      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
-      alt="foto"
-      width="60px"
-      height="100px"
-    />
+  <div class="col-sm-2 mx-5 my-5">
+    <div class="card" style="width: 18rem">
+      <img
+        src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+        class="card-img-top"
+        alt="Geometria"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Geometria</h5>
+        <p class="card-text">Material y ejercicios sobre el eje temático</p>
+        <a href="{% url 'geometria' %}" class="btn btn-primary">Entrar</a>
+      </div>
+    </div>
   </div>
-  <div>
-    <button class="btn btn-outline-primary">
-      <a href="{% url 'probabilidad' %}">Probabilidad y Estadística</a>
-    </button>
-    <img
-      src="{% static 'imagenes/foro/temas/foto.jpg' %}"
-      alt="foto"
-      width="60px"
-      height="100px"
-    />
+  <div class="col-sm-2 mx-5 my-5">
+    <div class="card" style="width: 18rem">
+      <img
+        src="{% static 'imagenes/foro/temas/foto.jpg' %}"
+        class="card-img-top"
+        alt="Estadistica"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Probabilidad y Estadística</h5>
+        <p class="card-text">Material y ejercicios sobre el eje temático</p>
+        <a href="{% url 'probabilidad' %}" class="btn btn-primary">Entrar</a>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock content %}

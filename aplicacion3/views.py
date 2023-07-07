@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Usuario, Foro, Comentarios
-from .form import Crear_comentario, Crear_usuario
+from .models import Usuario, Sugerencias
+from .form import Crear_sugerencia, Crear_usuario
 
 
 def usuarios(request):
@@ -10,26 +10,19 @@ def usuarios(request):
     return render(request, 'ap3/usuarios.html', {'usuarios': todoUsuarios})
 
 
-def foro(request):
+def sugerencias(request):
 
-    todoForo = Foro.objects.all()
+    todoSugerencias = Sugerencias.objects.all()
 
-    return render(request, 'ap3/foro.html', {'foro': todoForo})
-
-
-def comentarios(request):
-
-    todoComentarios = Comentarios.objects.all()
-
-    return render(request, 'ap3/comentarios.html', {'coment': todoComentarios})
+    return render(request, 'ap3/sugerencias.html', {'coment': todoSugerencias})
 
 
-def crearComentario(request):
+def crearSugerencia(request):
 
     if request.method == 'GET':
-        return render(request, 'ap3/crearComentario.html', {'form': Crear_comentario})
+        return render(request, 'ap3/crearSugerencia.html', {'form': Crear_sugerencia})
     else:
-        Comentarios.objects.create(
+        Sugerencias.objects.create(
             texto=request.POST['texto'], usuarioComent=request.POST['usuario'])
         return redirect('comentario')
 
